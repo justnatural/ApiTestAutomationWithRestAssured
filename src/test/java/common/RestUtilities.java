@@ -6,6 +6,9 @@ import io.restassured.RestAssured;
 import io.restassured.authentication.AuthenticationScheme;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -80,5 +83,23 @@ public class RestUtilities {
         response.then().spec(RESPONSE_SPEC);
         return response;
     }
+    
+    public static JsonPath getJsonPath(Response res) {
+    	String path = res.asString();
+    	return new JsonPath(path);
+    }
+    
+    public static XmlPath getXmlPath(Response res) {
+    	String path = res.asString();
+    	return new XmlPath(path);
+    }
+    
+    public static void resetBasePath() {
+    	RestAssured.basePath = null;
+    }
 
+    public static void setContentType(ContentType type) {
+    	given().contentType(type);
+    }
+    
 }

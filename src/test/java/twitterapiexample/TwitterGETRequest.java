@@ -8,10 +8,10 @@ import io.restassured.response.Response;
 
 
 public class TwitterGETRequest {
-	String consumerKey = "ubhe5nnmztzlJMzdLihtKEgsT";
-	String consumerSecret = "KjDJDSJw2o882K71cK33PqUdRbIlp5DNxCxYknDrSvQwNsb2S1";
-	String accessToken = "886092793365409792-mBtgcXzcn9IOC1WmWp5c1fXMn3HDZHr";
-	String accessSecret = "jUIEOAnEiZLlICLBlpR6UhVKZ98CMpQ7banbfcP5gW3eS";
+	String consumerKey = "2GMuRK1Y4HsVQ4v5Dzzz4YN2S";
+	String consumerSecret = "bzlNl5yw7agfZI50kXh8mY4H6LLkdxt9hzMgj6Jt1riThZQ9iu";
+	String accessToken = "2853753255-QAVUeknkoh9L233yCRaHzvwfWM1XupxA1qN3zUN";
+	String accessSecret = "j0tdUZ47fsatAyT03PmbvJKfSg99yAF2mv7nnRiWuZTLN";
 	String tweetId = "";
 
 	@BeforeClass
